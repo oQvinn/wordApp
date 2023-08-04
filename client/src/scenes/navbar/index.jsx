@@ -37,6 +37,7 @@ const Navbar = () => {
   const alt = theme.palette.background.alt;
 
   const fullName = `${user.firstName} ${user.lastName}`;
+  const userName = `${user.userName}`;
 
   return (
     <FlexBetween padding="1rem 6%" backgroundColor={alt}>
@@ -78,9 +79,9 @@ const Navbar = () => {
             )}
           </IconButton>
 
-          <FormControl variant="standard" value={fullName}>
+          <FormControl variant="standard" value={userName}>
             <Select
-              value={fullName}
+              value={userName}
               sx={{
                 backgroundColor: neutralLight,
                 width: "150px",
@@ -96,8 +97,8 @@ const Navbar = () => {
               }}
               input={<InputBase />}
             >
-              <MenuItem value={fullName}>
-                <Typography>{fullName}</Typography>
+              <MenuItem value={userName}>
+                <Typography>{userName}</Typography>
               </MenuItem>
               <MenuItem onClick={() => dispatch(setLogout())}>Log Out</MenuItem>
             </Select>
@@ -151,9 +152,9 @@ const Navbar = () => {
               )}
             </IconButton>
 
-            <FormControl variant="standard" value={fullName}>
+            <FormControl variant="standard" value={userName}>
               <Select
-                value={fullName}
+                value={userName}
                 sx={{
                   backgroundColor: neutralLight,
                   width: "150px",
@@ -169,8 +170,8 @@ const Navbar = () => {
                 }}
                 input={<InputBase />}
               >
-                <MenuItem value={fullName}>
-                  <Typography>{fullName}</Typography>
+                <MenuItem value={userName}>
+                  <Typography>{userName}</Typography>
                 </MenuItem>
                 <MenuItem onClick={() => dispatch(setLogout())}>
                   Log Out

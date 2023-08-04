@@ -1,6 +1,7 @@
 import { Box, useMediaQuery } from "@mui/material";
 import { useSelector } from "react-redux";
 import Navbar from "scenes/navbar";
+import GameWidget from "scenes/widgets/GameWidget";
 import UserWidget from "scenes/widgets/UserWidget";
 
 /*
@@ -35,10 +36,11 @@ const HomePage = () => {
           <UserWidget userId={_id} picturePath={picturePath} />
         </Box>
         <Box
-          flexBasis={isNonMobileScreens ? "42%" : undefined}
+          flexBasis={isNonMobileScreens ? "56%" : undefined}
           mt={isNonMobileScreens ? undefined : "2rem"}
         >
           {/*Add widgets here */}
+          <GameWidget></GameWidget>
         </Box>
         {isNonMobileScreens && (
           <Box flexBasis="26%"></Box>
